@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/lojacliente/css/bootstrap.css') }}"/>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}
+         <div class="container">
+             <header class="row">
+                 <div class="col-lg-6">
+                     <h1>Simples Blog</h1>
+                     <a href="{{ path('index') }}" title="index">Home</a>
+                     <a href="cliente" title="cliente">administracao</a>
+                 </div>
+             </header>
+             {% block content %}{% endblock %}
+             <footer class="col-lg-12">
+                 <p>© 2015 Ezequiel - Todos os direitos reservados</p>
+             </footer>
+         </div>
+
+
+
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Simples blog{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                {% for post in servicos %}
+                    <article class="col-lg-4">
+                        <div class="thumbnail">
+                            <a href="{{ path('servico_show', { 'id': post.id }) }}">
+                                <img class="img-responsive" src="{{ asset('logo-tableless.png') }}" alt="img" title="img">
+                            </a>
+                            <div class="caption">
+                                <h3><a href="{{ path('servico_show', { 'id': post.id }) }}">{{ post.descricao }}</a></h3>
+                                <p>{{ post.descricao }}</p>
+                                <p>{{ post.valor }}<br></p>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

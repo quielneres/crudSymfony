@@ -1,0 +1,5 @@
+loja_cliente:
+    resource: "@LojaClienteBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
